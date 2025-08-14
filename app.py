@@ -59,7 +59,7 @@ def detect_intent(text):
     if any(kw in text for kw in ["block", "remove", "delete"]): return "block_person"
     if any(kw in text for kw in ["promote"]): return "promote_person"
     if any(kw in text for kw in ["get", "find", "show", "what", "who", "details"]): return "get_person_details"
-    return None
+    return "clarify_action"
 
 def split_class_section(entities):
     if 'classSection' in entities:
